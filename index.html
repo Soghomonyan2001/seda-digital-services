@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,13 @@
 
     <title>Seda Soghomonyan | Virtual & Executive Assistant</title>
 
+    <meta name="description"
+          content="Seda Soghomonyan — Virtual Assistant, Executive Assistant, Research, Outreach and E-commerce Support.">
+
     <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -19,581 +24,1077 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #0b0b12;
-            color: #ffffff;
-            line-height: 1.6;
+            font-family: 'DM Sans', sans-serif;
+            background:
+                radial-gradient(circle at 80% 10%, rgba(155, 130, 255, 0.13), transparent 30%),
+                radial-gradient(circle at 10% 40%, rgba(100, 80, 180, 0.08), transparent 30%),
+                #08080d;
+            color: #f5f3fa;
+            line-height: 1.7;
         }
 
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ================= NAV ================= */
+
         nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px 8%;
-            border-bottom: 1px solid #242433;
-            position: sticky;
-            top: 0;
-            background: rgba(11, 11, 18, 0.95);
-            z-index: 100;
+
+            padding: 22px 7%;
+
+            background: rgba(8, 8, 13, 0.82);
+            backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.07);
         }
 
         .logo {
             font-size: 22px;
-            font-weight: bold;
-            color: #b9a7ff;
-            letter-spacing: 2px;
-        }
-
-        nav a {
-            color: #ddd;
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 15px;
-        }
-
-        nav a:hover {
-            color: #b9a7ff;
-        }
-
-        /* HERO */
-
-        .hero {
-            min-height: 88vh;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 60px;
-            padding: 80px 8%;
-        }
-
-        .hero-content {
-            max-width: 680px;
-        }
-
-        .small-title {
-            color: #b9a7ff;
-            font-size: 14px;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 64px;
-            line-height: 1.1;
-            margin-bottom: 25px;
-        }
-
-        h1 span {
-            color: #b9a7ff;
-        }
-
-        .hero p {
-            max-width: 650px;
-            color: #b8b8c7;
-            font-size: 18px;
-            margin-bottom: 35px;
-        }
-
-        .hero-image {
-            width: 360px;
-            height: 430px;
-            border-radius: 24px;
-            overflow: hidden;
-            border: 1px solid #302f43;
-            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
-            flex-shrink: 0;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .button {
-            display: inline-block;
-            background: #b9a7ff;
-            color: #0b0b12;
-            padding: 13px 25px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-        .button:hover {
-            opacity: 0.85;
-        }
-
-        .button.secondary {
-            background: transparent;
-            border: 1px solid #555566;
-            color: white;
-        }
-
-        /* GENERAL */
-
-        section {
-            padding: 100px 8%;
-        }
-
-        .section-title {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
-
-        .section-subtitle {
-            color: #aaaaba;
-            margin-bottom: 45px;
-        }
-
-        /* ABOUT */
-
-        .about {
-            max-width: 850px;
-            color: #c6c6d2;
-            font-size: 17px;
-        }
-
-        .about strong {
-            color: #ffffff;
-        }
-
-        /* SKILLS */
-
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 18px;
-        }
-
-        .skill {
-            background: #14141f;
-            border: 1px solid #292938;
-            padding: 22px;
-            border-radius: 12px;
-            transition: 0.3s;
-        }
-
-        .skill:hover {
-            transform: translateY(-5px);
-            border-color: #b9a7ff;
-        }
-
-        /* SERVICES */
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-        }
-
-        .project {
-            background: #14141f;
-            padding: 30px;
-            border-radius: 15px;
-            border: 1px solid #292938;
-            transition: 0.3s;
-        }
-
-        .project:hover {
-            transform: translateY(-5px);
-            border-color: #b9a7ff;
-        }
-
-        .project h3 {
-            margin-bottom: 12px;
-            color: #ffffff;
-        }
-
-        .project p {
-            color: #aaaaba;
-        }
-
-        /* TESTIMONIALS */
-
-        .testimonials {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .testimonial {
-            background: #14141f;
-            border: 1px solid #292938;
-            padding: 30px;
-            border-radius: 15px;
-            position: relative;
-        }
-
-        .quote {
-            color: #b9a7ff;
-            font-size: 35px;
-            line-height: 1;
-            margin-bottom: 15px;
-        }
-
-        .testimonial p {
-            color: #c4c4d0;
-            font-size: 15px;
-        }
-
-        .testimonial .stars {
-            color: #b9a7ff;
-            margin-top: 20px;
+            font-weight: 700;
             letter-spacing: 3px;
         }
 
-        /* CONTACT */
+        .logo span {
+            color: #b9a5ff;
+        }
 
-        .contact {
+        .nav-links {
+            display: flex;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: #a8a5b5;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #c3b3ff;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 90vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 70px;
+
+            padding: 90px 8% 100px;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 720px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            color: #bcaaff;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 30px;
+            height: 1px;
+            background: #b9a5ff;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+
+            font-size: clamp(48px, 6vw, 78px);
+
+            line-height: 1.05;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 28px;
+        }
+
+        h1 span {
+            color: #b9a5ff;
+        }
+
+        .hero-description {
+            max-width: 650px;
+
+            color: #aaa8b8;
+
+            font-size: 18px;
+
+            margin-bottom: 38px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn {
+            padding: 14px 24px;
+
+            border-radius: 50px;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #b9a5ff;
+            color: #0b0910;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(185,165,255,0.2);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.15);
+            color: #eee;
+        }
+
+        .btn-outline:hover {
+            border-color: #b9a5ff;
+            color: #c5b6ff;
+        }
+
+
+        /* ================= PROFILE IMAGE ================= */
+
+        .profile-wrapper {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .profile-glow {
+            position: absolute;
+            inset: -35px;
+
+            background: radial-gradient(
+                circle,
+                rgba(170,145,255,0.25),
+                transparent 65%
+            );
+
+            filter: blur(20px);
+        }
+
+        .profile-image {
+            position: relative;
+
+            width: 350px;
+            height: 430px;
+
+            overflow: hidden;
+
+            border-radius: 180px 180px 25px 25px;
+
+            border: 1px solid rgba(255,255,255,0.14);
+
+            box-shadow:
+                0 30px 80px rgba(0,0,0,0.5);
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.5s;
+        }
+
+        .profile-image:hover img {
+            transform: scale(1.04);
+        }
+
+        .availability {
+            position: absolute;
+
+            bottom: 25px;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            white-space: nowrap;
+
+            padding: 9px 16px;
+
+            background: rgba(12,12,18,0.85);
+
+            backdrop-filter: blur(12px);
+
+            border: 1px solid rgba(255,255,255,0.12);
+
+            border-radius: 50px;
+
+            font-size: 12px;
+            color: #ddd;
+        }
+
+        .availability::before {
+            content: "";
+
+            display: inline-block;
+
+            width: 7px;
+            height: 7px;
+
+            border-radius: 50%;
+
+            background: #86d7a0;
+
+            margin-right: 8px;
+        }
+
+
+        /* ================= SECTIONS ================= */
+
+        section {
+            padding: 110px 8%;
+        }
+
+        .section-header {
+            max-width: 700px;
+            margin-bottom: 55px;
+        }
+
+        .section-label {
+            color: #b9a5ff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+
+            font-size: clamp(36px, 4vw, 50px);
+
+            line-height: 1.15;
+
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+            color: #9693a4;
+            font-size: 16px;
+        }
+
+
+        /* ================= ABOUT ================= */
+
+        .about-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1.4fr;
+
+            gap: 70px;
+
+            align-items: start;
+        }
+
+        .about-intro {
+            font-family: 'Playfair Display', serif;
+
+            font-size: 30px;
+
+            line-height: 1.4;
+
+            color: #e9e6f2;
+        }
+
+        .about-text {
+            color: #a8a5b5;
+            font-size: 16px;
+        }
+
+        .about-text strong {
+            color: #eeeaf7;
+        }
+
+
+        /* ================= SERVICES ================= */
+
+        .services {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(260px, 1fr));
+
+            gap: 18px;
+        }
+
+        .service-card {
+            padding: 32px;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.055),
+                    rgba(255,255,255,0.018)
+                );
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            transition: 0.35s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+
+            border-color: rgba(185,165,255,0.45);
+
+            box-shadow:
+                0 20px 50px rgba(0,0,0,0.25);
+        }
+
+        .service-number {
+            color: #7e7890;
+            font-size: 12px;
+            margin-bottom: 25px;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #92909e;
+            font-size: 14px;
+        }
+
+
+        /* ================= SKILLS ================= */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            padding: 10px 16px;
+
+            border-radius: 50px;
+
+            background: rgba(255,255,255,0.035);
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            color: #b7b4c2;
+
+            font-size: 13px;
+
+            transition: 0.25s;
+        }
+
+        .skill:hover {
+            color: #d3c7ff;
+            border-color: rgba(185,165,255,0.4);
+        }
+
+
+        /* ================= TESTIMONIALS ================= */
+
+        .testimonials {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(290px, 1fr));
+
+            gap: 20px;
+        }
+
+        .testimonial {
+            padding: 32px;
+
+            border-radius: 20px;
+
+            background: rgba(255,255,255,0.035);
+
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .quote {
+            font-family: Georgia, serif;
+
+            font-size: 55px;
+
+            line-height: 0.7;
+
+            color: #b9a5ff;
+
+            margin-bottom: 25px;
+        }
+
+        .testimonial p {
+            color: #aaa8b5;
+
+            font-size: 14px;
+        }
+
+        .stars {
+            margin-top: 22px;
+
+            color: #b9a5ff;
+
+            letter-spacing: 4px;
+
+            font-size: 13px;
+        }
+
+
+        /* ================= CONTACT ================= */
+
+        .contact-section {
             text-align: center;
-            background: #10101a;
+
+            padding: 120px 8%;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(155,130,255,0.12),
+                    transparent 50%
+                );
         }
 
-        .contact p {
-            color: #aaaaba;
-            margin: 15px 0 30px;
+        .contact-section .section-title {
+            max-width: 700px;
+            margin: auto;
         }
+
+        .contact-text {
+            color: #9895a5;
+
+            max-width: 550px;
+
+            margin: 20px auto 35px;
+        }
+
+        .contact-links {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+        .contact-link {
+            padding: 12px 20px;
+
+            border-radius: 50px;
+
+            border: 1px solid rgba(255,255,255,0.1);
+
+            color: #c4c1cd;
+
+            font-size: 13px;
+
+            transition: 0.3s;
+        }
+
+        .contact-link:hover {
+            border-color: #b9a5ff;
+            color: #d2c7ff;
+            transform: translateY(-2px);
+        }
+
+
+        /* ================= FOOTER ================= */
 
         footer {
-            text-align: center;
-            padding: 25px;
-            color: #777788;
-            border-top: 1px solid #242433;
+            padding: 30px 8%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            border-top: 1px solid rgba(255,255,255,0.07);
+
+            color: #686674;
+
+            font-size: 12px;
         }
 
-        /* MOBILE */
 
-        @media (max-width: 800px) {
+        /* ================= MOBILE ================= */
 
-            nav {
-                flex-direction: column;
-                gap: 15px;
-            }
+        @media (max-width: 850px) {
 
-            nav a {
-                margin: 0 8px;
+            .nav-links {
+                display: none;
             }
 
             .hero {
                 flex-direction: column-reverse;
+
                 text-align: center;
-                padding-top: 60px;
+
+                padding-top: 70px;
             }
 
             .hero-content {
                 max-width: 100%;
             }
 
-            h1 {
-                font-size: 45px;
+            .buttons {
+                justify-content: center;
             }
 
-            .hero-image {
-                width: 280px;
-                height: 340px;
+            .profile-image {
+                width: 290px;
+                height: 350px;
             }
 
-            .hero p {
-                margin-left: auto;
-                margin-right: auto;
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
             }
         }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- NAVIGATION -->
 
-    <nav>
-        <div class="logo">SEDA.</div>
+<!-- ================= NAVIGATION ================= -->
 
-        <div>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#services">Services</a>
-            <a href="#feedback">Feedback</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+<nav>
+
+    <a href="#" class="logo">
+        SEDA<span>.</span>
+    </a>
+
+    <div class="nav-links">
+
+        <a href="#about">About</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#feedback">Feedback</a>
+
+        <a href="#contact">Contact</a>
+
+    </div>
+
+</nav>
 
 
-    <!-- HERO -->
 
-    <section class="hero">
+<!-- ================= HERO ================= -->
 
-        <div class="hero-content">
+<section class="hero">
 
-            <div class="small-title">
-                VIRTUAL ASSISTANT · EXECUTIVE ASSISTANT · E-COMMERCE
-            </div>
+    <div class="hero-content">
 
-            <h1>
-                Hi, I'm <span>Seda.</span><br>
-                Your reliable digital support partner.
-            </h1>
-
-            <p>
-                I help businesses stay organized and efficient through
-                virtual and executive assistance, online research,
-                written communication, outreach, lead generation,
-                and e-commerce support.
-            </p>
-
-            <a href="#services" class="button">
-                View My Services
-            </a>
-
-            <a href="#contact" class="button secondary">
-                Contact Me
-            </a>
-
+        <div class="eyebrow">
+            Virtual & Executive Assistant
         </div>
 
+        <h1>
+            Helping businesses
+            <span>stay organized</span>
+            and move forward.
+        </h1>
 
-        <div class="hero-image">
+        <p class="hero-description">
+            I'm Seda Soghomonyan, a Virtual & Executive Assistant
+            specializing in research, written communication, outreach,
+            lead generation, administrative support and e-commerce operations.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#services" class="btn btn-primary">
+                Explore My Services
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+                Let's Connect
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="profile-wrapper">
+
+        <div class="profile-glow"></div>
+
+        <div class="profile-image">
+
             <img
                 src="https://cdn.shopify.com/s/files/1/1031/7535/6785/files/1wMdQpyEbE4.jpg?v=1790161290"
                 alt="Seda Soghomonyan">
-        </div>
 
-    </section>
-
-
-    <!-- ABOUT -->
-
-    <section id="about">
-
-        <h2 class="section-title">About Me</h2>
-
-        <p class="section-subtitle">
-            Professional support for busy founders, executives and businesses.
-        </p>
-
-        <p class="about">
-            I'm a freelance <strong>Virtual Assistant and Executive Assistant</strong>
-            with experience supporting businesses through online research,
-            investor and company research, LinkedIn outreach, lead generation,
-            data management, email communication, scheduling and administrative
-            tasks.
-            <br><br>
-
-            I also have hands-on knowledge of <strong>Shopify and e-commerce</strong>,
-            including product listing, store management, HTML, CSS and Liquid
-            customization.
-        </p>
-
-    </section>
-
-
-    <!-- SKILLS -->
-
-    <section id="skills">
-
-        <h2 class="section-title">Skills & Tools</h2>
-
-        <p class="section-subtitle">
-            Tools and skills I use to support businesses and digital operations.
-        </p>
-
-        <div class="skills">
-
-            <div class="skill">Virtual Assistance</div>
-            <div class="skill">Executive Assistance</div>
-            <div class="skill">Online Research</div>
-            <div class="skill">Lead Generation</div>
-            <div class="skill">LinkedIn Outreach</div>
-            <div class="skill">Email Communication</div>
-            <div class="skill">Data Entry</div>
-            <div class="skill">Administrative Support</div>
-            <div class="skill">Shopify</div>
-            <div class="skill">E-commerce</div>
-            <div class="skill">HTML & CSS</div>
-            <div class="skill">Liquid</div>
-            <div class="skill">Apollo</div>
-            <div class="skill">Attio</div>
-            <div class="skill">Airtable</div>
-            <div class="skill">E27</div>
-            <div class="skill">Google Sheets</div>
-            <div class="skill">Microsoft Excel</div>
-            <div class="skill">Outlook</div>
-            <div class="skill">Canva</div>
-            <div class="skill">ChatGPT</div>
-            <div class="skill">Gemini</div>
-            <div class="skill">Qwen</div>
-
-        </div>
-
-    </section>
-
-
-    <!-- SERVICES -->
-
-    <section id="services">
-
-        <h2 class="section-title">What I Can Help With</h2>
-
-        <p class="section-subtitle">
-            Flexible support tailored to your business needs.
-        </p>
-
-        <div class="projects">
-
-            <div class="project">
-                <h3>Virtual Assistance</h3>
-                <p>
-                    Day-to-day administrative support, data entry,
-                    organization, research and digital tasks.
-                </p>
-            </div>
-
-            <div class="project">
-                <h3>Executive Assistance</h3>
-                <p>
-                    Supporting executives with scheduling, email
-                    communication, organization, research and administrative
-                    coordination.
-                </p>
-            </div>
-
-            <div class="project">
-                <h3>Research & Lead Generation</h3>
-                <p>
-                    Finding relevant companies, investors and contacts
-                    and organizing accurate prospect information.
-                </p>
-            </div>
-
-            <div class="project">
-                <h3>LinkedIn Outreach</h3>
-                <p>
-                    Supporting outreach activities and maintaining
-                    organized prospect and communication records.
-                </p>
-            </div>
-
-            <div class="project">
-                <h3>E-commerce Support</h3>
-                <p>
-                    Product research, product listing, store organization
-                    and general e-commerce operations.
-                </p>
-            </div>
-
-            <div class="project">
-                <h3>Shopify Support</h3>
-                <p>
-                    Shopify customization including HTML, CSS, Liquid,
-                    product pages, landing pages and store design.
-                </p>
+            <div class="availability">
+                Available for freelance work
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- CLIENT FEEDBACK -->
 
-    <section id="feedback">
+<!-- ================= ABOUT ================= -->
 
-        <h2 class="section-title">Client Feedback</h2>
+<section id="about">
 
-        <p class="section-subtitle">
-            What clients have said about working with me.
+    <div class="section-header">
+
+        <div class="section-label">
+            About Me
+        </div>
+
+        <h2 class="section-title">
+            Reliable support with attention to detail.
+        </h2>
+
+    </div>
+
+
+    <div class="about-grid">
+
+        <div class="about-intro">
+            Professional, organized and proactive support for busy
+            professionals and growing businesses.
+        </div>
+
+
+        <div class="about-text">
+
+            <p>
+                I'm a freelance <strong>Virtual Assistant and Executive Assistant</strong>
+                with experience supporting businesses with research,
+                investor and company research, LinkedIn outreach,
+                lead generation, data management, written communication,
+                scheduling and administrative tasks.
+            </p>
+
+            <br>
+
+            <p>
+                I also have hands-on knowledge of
+                <strong>Shopify and e-commerce operations</strong>,
+                from product listing and store management to
+                HTML, CSS and Liquid customization.
+            </p>
+
+            <br>
+
+            <p>
+                My approach is simple: stay organized, pay attention
+                to details, communicate clearly and make things easier
+                for the people I work with.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+    <div class="section-header">
+
+        <div class="section-label">
+            What I Do
+        </div>
+
+        <h2 class="section-title">
+            Services & Expertise
+        </h2>
+
+        <p class="section-description">
+            Flexible support for day-to-day operations, research,
+            executive assistance and digital business tasks.
         </p>
 
-        <div class="testimonials">
-
-            <div class="testimonial">
-
-                <div class="quote">“</div>
-
-                <p>
-                    Excellent person to work with! Seda is very attentive
-                    to details, understands complex task and is very
-                    responsive and proactive. I'm very happy with our
-                    collaboration and hope to keep it long term.
-                </p>
-
-                <div class="stars">★★★★★</div>
-
-            </div>
+    </div>
 
 
-            <div class="testimonial">
-
-                <div class="quote">“</div>
-
-                <p>
-                    I am so happy to have Seda on my team. She is very
-                    responsible, organized and respects deadlines.
-                </p>
-
-                <div class="stars">★★★★★</div>
-
-            </div>
+    <div class="services">
 
 
-            <div class="testimonial">
+        <div class="service-card">
 
-                <div class="quote">“</div>
+            <div class="service-number">01</div>
 
-                <p>
-                    Seda has proven to excellent. Her punctuality stands out,
-                    ensuring deadlines are met without exception. She brings
-                    a level of responsiveness that keeps operations running
-                    smoothly.
-                    <br><br>
+            <h3>Virtual Assistance</h3>
 
-                    Throughout our collaboration, Seda has shown consistent
-                    professionalism in every interaction. Her communication
-                    style is clear, courteous, and efficient, making
-                    coordination effortless. She handles responsibilities
-                    with great attention to detail.
-                    <br><br>
+            <p>
+                Administrative support, organization, data entry,
+                online research and day-to-day digital tasks.
+            </p>
 
-                    I appreciate her positive attitude and willingness to adapt.
-                    Seda is a strong asset for any executive role, and I would
-                    gladly work with her again.
-                </p>
+        </div>
 
-                <div class="stars">★★★★★</div>
 
+        <div class="service-card">
+
+            <div class="service-number">02</div>
+
+            <h3>Executive Assistance</h3>
+
+            <p>
+                Email management, scheduling, research,
+                organization and administrative coordination.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-number">03</div>
+
+            <h3>Research & Lead Generation</h3>
+
+            <p>
+                Researching companies, investors and contacts
+                and organizing accurate prospect information.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-number">04</div>
+
+            <h3>LinkedIn Outreach</h3>
+
+            <p>
+                Supporting outreach activities and maintaining
+                organized prospect and communication records.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-number">05</div>
+
+            <h3>E-commerce Support</h3>
+
+            <p>
+                Product research, product listing, store organization
+                and general e-commerce operations.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-number">06</div>
+
+            <h3>Shopify Support</h3>
+
+            <p>
+                Shopify customization including HTML, CSS,
+                Liquid, product pages and landing pages.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills">
+
+    <div class="section-header">
+
+        <div class="section-label">
+            My Toolkit
+        </div>
+
+        <h2 class="section-title">
+            Skills & Tools
+        </h2>
+
+    </div>
+
+
+    <div class="skills">
+
+        <div class="skill">Virtual Assistance</div>
+
+        <div class="skill">Executive Assistance</div>
+
+        <div class="skill">Online Research</div>
+
+        <div class="skill">Lead Generation</div>
+
+        <div class="skill">LinkedIn Outreach</div>
+
+        <div class="skill">Email Communication</div>
+
+        <div class="skill">Data Entry</div>
+
+        <div class="skill">Administrative Support</div>
+
+        <div class="skill">Shopify</div>
+
+        <div class="skill">E-commerce</div>
+
+        <div class="skill">HTML</div>
+
+        <div class="skill">CSS</div>
+
+        <div class="skill">Liquid</div>
+
+        <div class="skill">Apollo</div>
+
+        <div class="skill">Attio</div>
+
+        <div class="skill">Airtable</div>
+
+        <div class="skill">E27</div>
+
+        <div class="skill">Google Sheets</div>
+
+        <div class="skill">Microsoft Excel</div>
+
+        <div class="skill">Outlook</div>
+
+        <div class="skill">Canva</div>
+
+        <div class="skill">ChatGPT</div>
+
+        <div class="skill">Gemini</div>
+
+        <div class="skill">Qwen</div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FEEDBACK ================= -->
+
+<section id="feedback">
+
+    <div class="section-header">
+
+        <div class="section-label">
+            Client Feedback
+        </div>
+
+        <h2 class="section-title">
+            What clients say about working with me.
+        </h2>
+
+    </div>
+
+
+    <div class="testimonials">
+
+
+        <div class="testimonial">
+
+            <div class="quote">“</div>
+
+            <p>
+                Excellent person to work with! Seda is very attentive
+                to details, understands complex task and is very
+                responsive and proactive. I'm very happy with our
+                collaboration and hope to keep it long term.
+            </p>
+
+            <div class="stars">
+                ★★★★★
             </div>
 
         </div>
 
-    </section>
+
+        <div class="testimonial">
+
+            <div class="quote">“</div>
+
+            <p>
+                I am so happy to have Seda on my team. She is very
+                responsible, organized and respects deadlines.
+            </p>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+        </div>
 
 
-    <!-- CONTACT -->
+        <div class="testimonial">
 
-    <section id="contact" class="contact">
+            <div class="quote">“</div>
 
-        <h2 class="section-title">Let's Work Together</h2>
+            <p>
+                Seda has proven to excellent. Her punctuality stands out,
+                ensuring deadlines are met without exception. She brings
+                a level of responsiveness that keeps operations running smoothly.
+                <br><br>
 
-        <p>
-            Looking for reliable support with research, administration,
-            executive assistance or e-commerce operations?
-        </p>
+                Throughout our collaboration, Seda has shown consistent
+                professionalism in every interaction. Her communication
+                style is clear, courteous, and efficient, making coordination
+                effortless. She handles responsibilities with great attention
+                to detail.
+                <br><br>
 
-        <a href="mailto:your@email.com" class="button">
-            Get In Touch
+                I appreciate her positive attitude and willingness to adapt.
+                Seda is a strong asset for any executive role, and I would
+                gladly work with her again.
+            </p>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact-section">
+
+    <div class="section-label">
+        Get In Touch
+    </div>
+
+    <h2 class="section-title">
+        Let's work together.
+    </h2>
+
+    <p class="contact-text">
+        Looking for reliable support with virtual assistance,
+        executive assistance, research, outreach or e-commerce?
+        I'd be happy to connect.
+    </p>
+
+
+    <div class="contact-links">
+
+        <a
+            href="mailto:seda.s.yan18@gmail.com"
+            class="contact-link">
+            ✉ Email
         </a>
 
-    </section>
+
+        <a
+            href="https://www.linkedin.com/in/seda-soghomonyan-b256003a/"
+            target="_blank"
+            class="contact-link">
+            LinkedIn
+        </a>
 
 
-    <!-- FOOTER -->
+        <a
+            href="https://www.upwork.com/freelancers/~01f2e827f980a8a59c"
+            target="_blank"
+            class="contact-link">
+            Upwork
+        </a>
 
-    <footer>
-        © 2026 Seda Soghomonyan. All rights reserved.
-    </footer>
+
+        <a
+            href="https://www.fiverr.com/sogh__yan/buying?source=avatar_menu_profile"
+            target="_blank"
+            class="contact-link">
+            Fiverr
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div>
+        © 2026 Seda Soghomonyan
+    </div>
+
+    <div>
+        Virtual Assistant · Executive Assistant · E-commerce Support
+    </div>
+
+</footer>
+
 
 </body>
 </html>
 ```
-

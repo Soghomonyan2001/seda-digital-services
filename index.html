@@ -1,1 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Seda Soghomonyan | Virtual Assistant & E-commerce Support</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b0b12;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            border-bottom: 1px solid #242433;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #b9a7ff;
+        }
+
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #b9a7ff;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 8%;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .small-title {
+            color: #b9a7ff;
+            font-size: 15px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 64px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        h1 span {
+            color: #b9a7ff;
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: #b8b8c7;
+            font-size: 18px;
+            margin-bottom: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #b9a7ff;
+            color: #0b0b12;
+            padding: 13px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .button.secondary {
+            background: transparent;
+            border: 1px solid #555566;
+            color: white;
+        }
+
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            color: #aaaaba;
+            margin-bottom: 45px;
+        }
+
+        .about {
+            max-width: 850px;
+            color: #c6c6d2;
+            font-size: 17px;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+        }
+
+        .skill {
+            background: #14141f;
+            border: 1px solid #292938;
+            padding: 22px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            border-color: #b9a7ff;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: #14141f;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #292938;
+        }
+
+        .project h3 {
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .project p {
+            color: #aaaaba;
+        }
+
+        .contact {
+            text-align: center;
+            background: #10101a;
+        }
+
+        .contact p {
+            color: #aaaaba;
+            margin: 15px 0 30px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #777788;
+            border-top: 1px solid #242433;
+        }
+
+        @media (max-width: 700px) {
+            h1 {
+                font-size: 43px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">SEDA.</div>
+
+        <div>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Work</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                VIRTUAL ASSISTANT · RESEARCH · E-COMMERCE
+            </div>
+
+            <h1>
+                Hi, I'm <span>Seda.</span><br>
+                I help businesses stay organized and grow.
+            </h1>
+
+            <p>
+                Virtual Assistant specializing in online research,
+                lead generation, written communication, outreach,
+                administrative support, and e-commerce operations.
+            </p>
+
+            <a href="#projects" class="button">
+                View My Work
+            </a>
+
+            <a href="#contact" class="button secondary">
+                Contact Me
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p class="section-subtitle">
+            Reliable support for research, communication and digital operations.
+        </p>
+
+        <p class="about">
+            I'm a freelance Virtual Assistant with experience in online research,
+            investor and company research, LinkedIn outreach, lead generation,
+            data management, email communication, and administrative support.
+            I also have hands-on knowledge of Shopify and e-commerce, from
+            product listing and store management to HTML, CSS and Liquid
+            customization.
+        </p>
+
+    </section>
+
+
+    <section id="skills">
+
+        <h2 class="section-title">Skills & Tools</h2>
+
+        <p class="section-subtitle">
+            Tools and skills I use to support businesses and projects.
+        </p>
+
+        <div class="skills">
+
+            <div class="skill">Virtual Assistance</div>
+            <div class="skill">Executive Assistance</div>
+            <div class="skill">Online Research</div>
+            <div class="skill">Lead Generation</div>
+            <div class="skill">LinkedIn Outreach</div>
+            <div class="skill">Email Communication</div>
+            <div class="skill">Data Entry</div>
+            <div class="skill">Shopify</div>
+            <div class="skill">E-commerce</div>
+            <div class="skill">HTML & CSS</div>
+            <div class="skill">Liquid</div>
+            <div class="skill">Apollo</div>
+            <div class="skill">Attio</div>
+            <div class="skill">Airtable</div>
+            <div class="skill">E27</div>
+            <div class="skill">Google Sheets</div>
+            <div class="skill">Microsoft Excel</div>
+            <div class="skill">Outlook</div>
+            <div class="skill">Canva</div>
+            <div class="skill">ChatGPT · Gemini · Qwen</div>
+
+        </div>
+
+    </section>
+
+
+    <section id="projects">
+
+        <h2 class="section-title">Selected Work</h2>
+
+        <p class="section-subtitle">
+            Examples of the type of work I can support.
+        </p>
+
+        <div class="projects">
+
+            <div class="project">
+                <h3>Investor Research</h3>
+                <p>
+                    Researching investors, companies and relevant business
+                    information using LinkedIn, E27, Apollo and other research tools.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Lead Generation</h3>
+                <p>
+                    Finding relevant companies and contacts, organizing
+                    prospect data and maintaining accurate records.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>LinkedIn Outreach</h3>
+                <p>
+                    Supporting outreach activities and keeping communication
+                    and prospect information organized.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>E-commerce Support</h3>
+                <p>
+                    Product research, product listing, store organization
+                    and general e-commerce operations.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Shopify</h3>
+                <p>
+                    Shopify store customization including HTML, CSS,
+                    Liquid, product pages, landing pages and store design.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Administrative Support</h3>
+                <p>
+                    Email management, scheduling, spreadsheets, data entry
+                    and other day-to-day administrative tasks.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="contact" class="contact">
+
+        <h2 class="section-title">Let's Work Together</h2>
+
+        <p>
+            Looking for reliable support with research, administration
+            or e-commerce operations?
+        </p>
+
+        <a href="mailto:your@email.com" class="button">
+            Get In Touch
+        </a>
+
+    </section>
+
+
+    <footer>
+        © 2026 Seda Soghomonyan. All rights reserved.
+    </footer>
+
+</body>
+</html>

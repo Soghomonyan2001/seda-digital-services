@@ -1,16 +1,21 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Seda Soghomonyan | Virtual Assistant & E-commerce Support</title>
+    <title>Seda Soghomonyan | Virtual & Executive Assistant</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -26,12 +31,17 @@
             align-items: center;
             padding: 25px 8%;
             border-bottom: 1px solid #242433;
+            position: sticky;
+            top: 0;
+            background: rgba(11, 11, 18, 0.95);
+            z-index: 100;
         }
 
         .logo {
             font-size: 22px;
             font-weight: bold;
             color: #b9a7ff;
+            letter-spacing: 2px;
         }
 
         nav a {
@@ -45,20 +55,24 @@
             color: #b9a7ff;
         }
 
+        /* HERO */
+
         .hero {
-            min-height: 85vh;
+            min-height: 88vh;
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            gap: 60px;
             padding: 80px 8%;
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 680px;
         }
 
         .small-title {
             color: #b9a7ff;
-            font-size: 15px;
+            font-size: 14px;
             letter-spacing: 2px;
             margin-bottom: 20px;
         }
@@ -80,6 +94,22 @@
             margin-bottom: 35px;
         }
 
+        .hero-image {
+            width: 360px;
+            height: 430px;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid #302f43;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+            flex-shrink: 0;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .button {
             display: inline-block;
             background: #b9a7ff;
@@ -91,14 +121,20 @@
             margin-right: 10px;
         }
 
+        .button:hover {
+            opacity: 0.85;
+        }
+
         .button.secondary {
             background: transparent;
             border: 1px solid #555566;
             color: white;
         }
 
+        /* GENERAL */
+
         section {
-            padding: 90px 8%;
+            padding: 100px 8%;
         }
 
         .section-title {
@@ -111,11 +147,19 @@
             margin-bottom: 45px;
         }
 
+        /* ABOUT */
+
         .about {
             max-width: 850px;
             color: #c6c6d2;
             font-size: 17px;
         }
+
+        .about strong {
+            color: #ffffff;
+        }
+
+        /* SKILLS */
 
         .skills {
             display: grid;
@@ -136,6 +180,8 @@
             border-color: #b9a7ff;
         }
 
+        /* SERVICES */
+
         .projects {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -147,6 +193,12 @@
             padding: 30px;
             border-radius: 15px;
             border: 1px solid #292938;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            border-color: #b9a7ff;
         }
 
         .project h3 {
@@ -157,6 +209,42 @@
         .project p {
             color: #aaaaba;
         }
+
+        /* TESTIMONIALS */
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .testimonial {
+            background: #14141f;
+            border: 1px solid #292938;
+            padding: 30px;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .quote {
+            color: #b9a7ff;
+            font-size: 35px;
+            line-height: 1;
+            margin-bottom: 15px;
+        }
+
+        .testimonial p {
+            color: #c4c4d0;
+            font-size: 15px;
+        }
+
+        .testimonial .stars {
+            color: #b9a7ff;
+            margin-top: 20px;
+            letter-spacing: 3px;
+        }
+
+        /* CONTACT */
 
         .contact {
             text-align: center;
@@ -175,10 +263,9 @@
             border-top: 1px solid #242433;
         }
 
-        @media (max-width: 700px) {
-            h1 {
-                font-size: 43px;
-            }
+        /* MOBILE */
+
+        @media (max-width: 800px) {
 
             nav {
                 flex-direction: column;
@@ -188,11 +275,37 @@
             nav a {
                 margin: 0 8px;
             }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 60px;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            h1 {
+                font-size: 45px;
+            }
+
+            .hero-image {
+                width: 280px;
+                height: 340px;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
     </style>
 </head>
 
 <body>
+
+    <!-- NAVIGATION -->
 
     <nav>
         <div class="logo">SEDA.</div>
@@ -200,33 +313,37 @@
         <div>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
-            <a href="#projects">Work</a>
+            <a href="#services">Services</a>
+            <a href="#feedback">Feedback</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
+
+    <!-- HERO -->
 
     <section class="hero">
 
         <div class="hero-content">
 
             <div class="small-title">
-                VIRTUAL ASSISTANT · RESEARCH · E-COMMERCE
+                VIRTUAL ASSISTANT · EXECUTIVE ASSISTANT · E-COMMERCE
             </div>
 
             <h1>
                 Hi, I'm <span>Seda.</span><br>
-                I help businesses stay organized and grow.
+                Your reliable digital support partner.
             </h1>
 
             <p>
-                Virtual Assistant specializing in online research,
-                lead generation, written communication, outreach,
-                administrative support, and e-commerce operations.
+                I help businesses stay organized and efficient through
+                virtual and executive assistance, online research,
+                written communication, outreach, lead generation,
+                and e-commerce support.
             </p>
 
-            <a href="#projects" class="button">
-                View My Work
+            <a href="#services" class="button">
+                View My Services
             </a>
 
             <a href="#contact" class="button secondary">
@@ -235,35 +352,50 @@
 
         </div>
 
+
+        <div class="hero-image">
+            <img
+                src="https://cdn.shopify.com/s/files/1/1031/7535/6785/files/1wMdQpyEbE4.jpg?v=1790161290"
+                alt="Seda Soghomonyan">
+        </div>
+
     </section>
 
+
+    <!-- ABOUT -->
 
     <section id="about">
 
         <h2 class="section-title">About Me</h2>
 
         <p class="section-subtitle">
-            Reliable support for research, communication and digital operations.
+            Professional support for busy founders, executives and businesses.
         </p>
 
         <p class="about">
-            I'm a freelance Virtual Assistant with experience in online research,
+            I'm a freelance <strong>Virtual Assistant and Executive Assistant</strong>
+            with experience supporting businesses through online research,
             investor and company research, LinkedIn outreach, lead generation,
-            data management, email communication, and administrative support.
-            I also have hands-on knowledge of Shopify and e-commerce, from
-            product listing and store management to HTML, CSS and Liquid
+            data management, email communication, scheduling and administrative
+            tasks.
+            <br><br>
+
+            I also have hands-on knowledge of <strong>Shopify and e-commerce</strong>,
+            including product listing, store management, HTML, CSS and Liquid
             customization.
         </p>
 
     </section>
 
 
+    <!-- SKILLS -->
+
     <section id="skills">
 
         <h2 class="section-title">Skills & Tools</h2>
 
         <p class="section-subtitle">
-            Tools and skills I use to support businesses and projects.
+            Tools and skills I use to support businesses and digital operations.
         </p>
 
         <div class="skills">
@@ -275,6 +407,7 @@
             <div class="skill">LinkedIn Outreach</div>
             <div class="skill">Email Communication</div>
             <div class="skill">Data Entry</div>
+            <div class="skill">Administrative Support</div>
             <div class="skill">Shopify</div>
             <div class="skill">E-commerce</div>
             <div class="skill">HTML & CSS</div>
@@ -287,44 +420,57 @@
             <div class="skill">Microsoft Excel</div>
             <div class="skill">Outlook</div>
             <div class="skill">Canva</div>
-            <div class="skill">ChatGPT · Gemini · Qwen</div>
+            <div class="skill">ChatGPT</div>
+            <div class="skill">Gemini</div>
+            <div class="skill">Qwen</div>
 
         </div>
 
     </section>
 
 
-    <section id="projects">
+    <!-- SERVICES -->
 
-        <h2 class="section-title">Selected Work</h2>
+    <section id="services">
+
+        <h2 class="section-title">What I Can Help With</h2>
 
         <p class="section-subtitle">
-            Examples of the type of work I can support.
+            Flexible support tailored to your business needs.
         </p>
 
         <div class="projects">
 
             <div class="project">
-                <h3>Investor Research</h3>
+                <h3>Virtual Assistance</h3>
                 <p>
-                    Researching investors, companies and relevant business
-                    information using LinkedIn, E27, Apollo and other research tools.
+                    Day-to-day administrative support, data entry,
+                    organization, research and digital tasks.
                 </p>
             </div>
 
             <div class="project">
-                <h3>Lead Generation</h3>
+                <h3>Executive Assistance</h3>
                 <p>
-                    Finding relevant companies and contacts, organizing
-                    prospect data and maintaining accurate records.
+                    Supporting executives with scheduling, email
+                    communication, organization, research and administrative
+                    coordination.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Research & Lead Generation</h3>
+                <p>
+                    Finding relevant companies, investors and contacts
+                    and organizing accurate prospect information.
                 </p>
             </div>
 
             <div class="project">
                 <h3>LinkedIn Outreach</h3>
                 <p>
-                    Supporting outreach activities and keeping communication
-                    and prospect information organized.
+                    Supporting outreach activities and maintaining
+                    organized prospect and communication records.
                 </p>
             </div>
 
@@ -337,18 +483,10 @@
             </div>
 
             <div class="project">
-                <h3>Shopify</h3>
+                <h3>Shopify Support</h3>
                 <p>
-                    Shopify store customization including HTML, CSS,
-                    Liquid, product pages, landing pages and store design.
-                </p>
-            </div>
-
-            <div class="project">
-                <h3>Administrative Support</h3>
-                <p>
-                    Email management, scheduling, spreadsheets, data entry
-                    and other day-to-day administrative tasks.
+                    Shopify customization including HTML, CSS, Liquid,
+                    product pages, landing pages and store design.
                 </p>
             </div>
 
@@ -357,13 +495,89 @@
     </section>
 
 
+    <!-- CLIENT FEEDBACK -->
+
+    <section id="feedback">
+
+        <h2 class="section-title">Client Feedback</h2>
+
+        <p class="section-subtitle">
+            What clients have said about working with me.
+        </p>
+
+        <div class="testimonials">
+
+            <div class="testimonial">
+
+                <div class="quote">“</div>
+
+                <p>
+                    Excellent person to work with! Seda is very attentive
+                    to details, understands complex task and is very
+                    responsive and proactive. I'm very happy with our
+                    collaboration and hope to keep it long term.
+                </p>
+
+                <div class="stars">★★★★★</div>
+
+            </div>
+
+
+            <div class="testimonial">
+
+                <div class="quote">“</div>
+
+                <p>
+                    I am so happy to have Seda on my team. She is very
+                    responsible, organized and respects deadlines.
+                </p>
+
+                <div class="stars">★★★★★</div>
+
+            </div>
+
+
+            <div class="testimonial">
+
+                <div class="quote">“</div>
+
+                <p>
+                    Seda has proven to excellent. Her punctuality stands out,
+                    ensuring deadlines are met without exception. She brings
+                    a level of responsiveness that keeps operations running
+                    smoothly.
+                    <br><br>
+
+                    Throughout our collaboration, Seda has shown consistent
+                    professionalism in every interaction. Her communication
+                    style is clear, courteous, and efficient, making
+                    coordination effortless. She handles responsibilities
+                    with great attention to detail.
+                    <br><br>
+
+                    I appreciate her positive attitude and willingness to adapt.
+                    Seda is a strong asset for any executive role, and I would
+                    gladly work with her again.
+                </p>
+
+                <div class="stars">★★★★★</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
     <section id="contact" class="contact">
 
         <h2 class="section-title">Let's Work Together</h2>
 
         <p>
-            Looking for reliable support with research, administration
-            or e-commerce operations?
+            Looking for reliable support with research, administration,
+            executive assistance or e-commerce operations?
         </p>
 
         <a href="mailto:your@email.com" class="button">
@@ -373,9 +587,13 @@
     </section>
 
 
+    <!-- FOOTER -->
+
     <footer>
         © 2026 Seda Soghomonyan. All rights reserved.
     </footer>
 
 </body>
 </html>
+```
+

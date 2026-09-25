@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title> SEDA SOGHOMONYAN | Virtual & Executive Assistant</title>
+    <title>SEDA SOGHOMONYAN | Virtual & Executive Assistant</title>
 
     <meta name="description"
           content="Seda Soghomonyan — Virtual Assistant, Executive Assistant, Research, Outreach and E-commerce Support.">
@@ -58,9 +58,9 @@
         }
 
         .logo {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 700;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
         }
 
         .logo span {
@@ -211,12 +211,13 @@
         .profile-image {
             position: relative;
 
-            width: 350px;
-            height: 430px;
+            /* Մեծացված չափսեր */
+            width: 420px;
+            height: 520px;
 
             overflow: hidden;
 
-            border-radius: 180px 180px 25px 25px;
+            border-radius: 210px 210px 30px 30px;
 
             border: 1px solid rgba(255,255,255,0.14);
 
@@ -398,7 +399,26 @@
         }
 
 
-        /* ================= SKILLS ================= */
+        /* ================= SKILLS & TOOLS ================= */
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .skills-group {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .group-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #e9e6f2;
+            margin-bottom: 5px;
+        }
 
         .skills {
             display: flex;
@@ -581,13 +601,19 @@
             }
 
             .profile-image {
-                width: 290px;
-                height: 350px;
+                /* Մեծացված չափսեր mobile-ի համար */
+                width: 320px;
+                height: 400px;
             }
 
             .about-grid {
                 grid-template-columns: 1fr;
                 gap: 30px;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
             }
 
             footer {
@@ -608,7 +634,7 @@
 <nav>
 
     <a href="#" class="logo">
-        SEDA<span>.</span>
+        SEDA <span>SOGHOMONYAN</span>
     </a>
 
     <div class="nav-links">
@@ -646,7 +672,7 @@
         </h1>
 
         <p class="hero-description">
-            I'm Seda , a Virtual & Executive Assistant
+            I'm Seda, a Virtual & Executive Assistant
             specializing in research, outreach,
             lead generation, administrative support and e-commerce operations.
         </p>
@@ -862,7 +888,7 @@
 
 
 
-<!-- ================= SKILLS ================= -->
+<!-- ================= SKILLS & TOOLS ================= -->
 
 <section id="skills">
 
@@ -878,56 +904,45 @@
 
     </div>
 
+    <div class="skills-container">
+        
+        <!-- Professional Skills -->
+        <div class="skills-group">
+            <h3 class="group-title">Professional Skills</h3>
+            <div class="skills">
+                <div class="skill">Virtual Assistance</div>
+                <div class="skill">Executive Assistance</div>
+                <div class="skill">Online Research</div>
+                <div class="skill">Lead Generation</div>
+                <div class="skill">LinkedIn Outreach</div>
+                <div class="skill">Email Communication</div>
+                <div class="skill">Data Entry</div>
+                <div class="skill">Administrative Support</div>
+                <div class="skill">E-commerce Operations</div>
+            </div>
+        </div>
 
-    <div class="skills">
-
-        <div class="skill">Virtual Assistance</div>
-
-        <div class="skill">Executive Assistance</div>
-
-        <div class="skill">Online Research</div>
-
-        <div class="skill">Lead Generation</div>
-
-        <div class="skill">LinkedIn Outreach</div>
-
-        <div class="skill">Email Communication</div>
-
-        <div class="skill">Data Entry</div>
-
-        <div class="skill">Administrative Support</div>
-
-        <div class="skill">Shopify</div>
-
-        <div class="skill">E-commerce</div>
-
-        <div class="skill">HTML</div>
-
-        <div class="skill">CSS</div>
-
-        <div class="skill">Custom Liquid</div>
-
-        <div class="skill">Apollo</div>
-
-        <div class="skill">Attio</div>
-
-        <div class="skill">Airtable</div>
-
-        <div class="skill">E27</div>
-
-        <div class="skill">Google Sheets</div>
-
-        <div class="skill">Microsoft Excel</div>
-
-        <div class="skill">Outlook</div>
-
-        <div class="skill">Canva</div>
-
-        <div class="skill">ChatGPT</div>
-
-        <div class="skill">Gemini</div>
-
-        <div class="skill">Qwen</div>
+        <!-- Tools & Software -->
+        <div class="skills-group">
+            <h3 class="group-title">Tools & Software</h3>
+            <div class="skills">
+                <div class="skill">Shopify</div>
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">Custom Liquid</div>
+                <div class="skill">Apollo</div>
+                <div class="skill">Attio</div>
+                <div class="skill">Airtable</div>
+                <div class="skill">E27</div>
+                <div class="skill">Google Sheets</div>
+                <div class="skill">Microsoft Excel</div>
+                <div class="skill">Outlook</div>
+                <div class="skill">Canva</div>
+                <div class="skill">ChatGPT</div>
+                <div class="skill">Gemini</div>
+                <div class="skill">Qwen</div>
+            </div>
+        </div>
 
     </div>
 
@@ -1097,4 +1112,3 @@
 
 </body>
 </html>
-```
